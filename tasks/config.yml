@@ -66,6 +66,11 @@ buildProfile:
     - name: common/index
     - name: home/index
     - name: dashboard/index
+    - name: charts/index
+    - name: examples/index
+    - name: forms/index
+    - name: tables/index
+    - name: UI/index
 
 # ----------------------------------------
 # TESTING PROPERTIES
