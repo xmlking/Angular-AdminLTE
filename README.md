@@ -13,7 +13,7 @@ This **[Demo](http://xmlking.github.io/Angular-AdminLTE/)** is created with [bac
 
 * blah blah blah 
 * blah blah blah
- 
+* blah blah blah 
  
 ### Getting Started
 
