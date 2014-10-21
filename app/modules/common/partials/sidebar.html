@@ -1,0 +1,114 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+  <!-- Sidebar user panel -->
+  <div class="user-panel">
+    <div class="pull-left image">
+      <img src="images/avatar3.png" class="img-circle" alt="User Image"/>
+    </div>
+    <div class="pull-left info">
+      <p>Hello, Jane</p>
+
+      <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+    </div>
+  </div>
+  <!-- search form -->
+  <form action="#" method="get" class="sidebar-form">
+    <div class="input-group">
+      <input type="text" name="q" class="form-control" placeholder="Search..."/>
+      <span class="input-group-btn">
+          <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i
+            class="fa fa-search"></i></button>
+      </span>
+    </div>
+  </form>
+  <!-- /.search form -->
+  <!-- sidebar menu: : style can be found in sidebar.less -->
+  <ul class="sidebar-menu">
+    <li ui-sref-active-eq="active">
+      <a ui-sref="root.dashboard">
+        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+      </a>
+    </li>
+    <li ui-sref-active-eq="active">
+      <a ui-sref="root.widgets">
+        <i class="fa fa-th"></i> <span>Widgets</span>
+        <small class="badge pull-right bg-green">new</small>
+      </a>
+    </li>
+    <li class="treeview" ng-class="{active: $state.includes('root.charts.*')}" treeview>
+      <a href="#">
+        <i class="fa fa-bar-chart-o"></i>
+        <span>Charts</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li ui-sref-active-eq="active"><a ui-sref="root.charts.morris"><i class="fa fa-angle-double-right"></i> {{::$state.get('root.charts.morris').content.title}}</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.charts.flot"><i class="fa fa-angle-double-right"></i> {{::$state.get('root.charts.flot').content.title}}</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.charts.inline"><i class="fa fa-angle-double-right"></i> {{::$state.get('root.charts.inline').content.title}}</a></li>
+      </ul>
+    </li>
+    <li class="treeview" ng-class="{active: $state.includes('root.ui.*')}" treeview>
+      <a href="#">
+        <i class="fa fa-laptop"></i>
+        <span>UI Elements</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li ui-sref-active-eq="active"><a ui-sref="root.ui.general"><i class="fa fa-angle-double-right"></i> General</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.ui.icons"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.ui.buttons"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.ui.sliders"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.ui.timeline"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+      </ul>
+    </li>
+    <li class="treeview" ng-class="{active: $state.includes('root.forms.*')}" treeview>
+      <a href="#">
+        <i class="fa fa-edit"></i> <span>Forms</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li ui-sref-active-eq="active"><a ui-sref="root.forms.general"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.forms.advanced"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.forms.editors"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+      </ul>
+    </li>
+    <li class="treeview" ng-class="{active: $state.includes('root.tables.*')}" treeview>
+      <a href="#">
+        <i class="fa fa-table"></i> <span>Tables</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li ui-sref-active-eq="active"><a ui-sref="root.tables.simple"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.tables.data"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+      </ul>
+    </li>
+    <li ui-sref-active-eq="active">
+      <a ui-sref="root.calendar">
+        <i class="fa fa-calendar"></i> <span>Calendar</span>
+        <small class="badge pull-right bg-red">3</small>
+      </a>
+    </li>
+    <li ui-sref-active-eq="active">
+      <a ui-sref="root.mailbox">
+        <i class="fa fa-envelope"></i> <span>Mailbox</span>
+        <small class="badge pull-right bg-yellow">12</small>
+      </a>
+    </li>
+    <li class="treeview" ng-class="{active: $state.includes('root.examples.*')}" treeview>
+      <a href="#">
+        <i class="fa fa-folder"></i> <span>Examples</span>
+        <i class="fa fa-angle-left pull-right"></i>
+      </a>
+      <ul class="treeview-menu">
+        <li ui-sref-active-eq="active"><a ui-sref="root.examples.invoice"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+        <li><a href="login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+        <li><a href="register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+        <li><a href="lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.examples.404"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.examples.500"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+        <li ui-sref-active-eq="active"><a ui-sref="root.examples.blank"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<!-- /.sidebar -->

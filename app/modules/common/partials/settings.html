@@ -1,0 +1,24 @@
+<div  class="container">
+    <div class="row" ng-controller="LoginController as lc">
+        <div class="col-md-8">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-title">{{currentUser.displayName}}</div>
+                </div>
+                <table class="table table-hover table-responsive">
+                    <tbody>
+                        <tr ng-repeat="(key, value) in currentUser track by key"  ng-hide="key === 'reqParams' || key === 'authorities' || key === 'parentResource' || key === 'route' ">
+                            <td>{{key}}</td>
+                            <td>{{value}}</td>
+                        </tr>
+                        <tr ng-repeat="authority in currentUser.authorities">
+                            <td>Authority</td>
+                            <td>{{authority.authority}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>

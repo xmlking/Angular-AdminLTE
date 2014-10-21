@@ -1,0 +1,115 @@
+---
+# ===================================================================
+# BUILD-TIME CONFIG PROPERTIES
+#
+# This is multi-env properties file. Keep sensitive data in external
+# file that SysOps can source at runtime.
+# ===================================================================
+
+
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+
+# Paths
+paths:
+  scripts:
+    - "app/modules/**/*.js"
+    - "!app/compiled/**/*.js"
+  images: "app/images/**/*"
+  sass:
+    - "app/styles/**/*.scss"
+    - "!app/styles/**/_*.scss"
+  temp: .tmp
+  dest: dist
+
+# autoprefixer
+autoprefixer:
+  - "ie >= 10"
+  - "ie_mob >= 10"
+  - "ff >= 30"
+  - "chrome >= 34"
+  - "safari >= 7"
+  - "opera >= 23"
+  - "ios >= 7"
+  - "android >= 4.4"
+  - "bb >= 10"
+
+# traceur
+traceur:
+  modules: amd
+  types: true
+  typeAssertions: true
+  annotations: true
+  typeAssertionModule: assert
+  experimental: true
+
+# Require JS Bundler
+buildProfile:
+  mainConfigFile: app/config.js
+  appDir: .tmp
+  baseUrl: modules
+  removeCombined: true
+  findNestedDependencies: true
+  dir: dist
+  optimizeCss: none
+  optimize: none
+  modules:
+    - name: vendor
+      exclude:
+        - angular
+    - name: bootstrap
+      include:
+        - requireLib
+      exclude:
+        - vendor
+    - name: common/index
+    - name: home/index
+    - name: dashboard/index
+
+# ----------------------------------------
+# TESTING PROPERTIES
+# ----------------------------------------
+
+# karma unit testing
+karmaCommonConf:
+  frameworks:
+    - jasmine
+    - requirejs
+    - traceur
+  files:
+    - test/test-main.js
+    - pattern: "app/modules/**/*.js"
+      included: false
+    - pattern: "test/unit/**/*.js"
+      included: false
+    - pattern: ".tmp/modules/di/*.js"
+      included: false
+    - pattern: .tmp/modules/assert.js
+      included: false
+    - pattern: .tmp/modules/diary/diary.js
+      included: false
+  exclude:
+    - app/modules/bootstrap.js
+  proxies:
+    /base/di/: /base/.tmp/modules/di/
+    /base/assert.js: /base/.tmp/modules/assert.js
+    /base/diary/diary.js: /base/.tmp/modules/diary/diary.js
+  reporters:
+    - progress
+  preprocessors:
+    "app/modules/**/*.js":
+      - traceur
+    "test/unit/**/*.js":
+      - traceur
+  browsers:
+    - Chrome
+  traceurPreprocessor:
+    options:
+      modules: amd
+      types: true
+      typeAssertions: true
+      annotations: true
+      typeAssertionModule: assert
+      experimental: true
+      sourceMap: false

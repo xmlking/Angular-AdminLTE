@@ -1,0 +1,30 @@
+<span ng-controller="LoginModalController as lmc">
+<div class="modal-header">
+    <button type="button" class="close" ng-click="lmc.cancel()">&times;</button>
+    <h3>Login</h3>
+    <div class="text-info"><small>
+        Log in as <strong>sumo/demo</strong> or <strong>itadmin/itadmin</strong>
+        See <code>/app/test.env.js</code></small></div>
+</div>
+<form name="loginForm" role="form" ng-submit="lmc.submit(credentials)" novalidate>
+<div class="modal-body">
+    <div class="form-group">
+        <label class="sr-only" for="user_username">Username</label>
+        <input id="user_username" type="text" class="form-control" ng-model="credentials.username" placeholder="Username" autofocus required/>
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="user_password">Password</label>
+        <input id="user_password" type="password" class="form-control" ng-model="credentials.password" placeholder="Password" required/>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-model="credentials.rememberMe"  > Remember me
+        </label>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="lmc.cancel()">Cancel</button>
+    <button type="submit" ng-disabled="!loginForm.$valid" class="btn btn-primary">Sign in</button>
+</div>
+</form>
+</span>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title ng-bind="'AdminLTE | ' + $state.current.content.title">AdminLTE</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" href="../bower_components/angular-growl-v2/build/angular-growl.css" />
+    <link rel="stylesheet" href="../bower_components/fullcalendar/fullcalendar.css" />
+    <link rel="stylesheet" href="../bower_components/ng-table/ng-table.css" />
+    <link rel="stylesheet" href="../bower_components/iCheck/skins/all.css" />
+    <link rel="stylesheet" href="../bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="../bower_components/morrisjs/morris.css" />
+    <link rel="stylesheet" href="../bower_components/nvd3/src/nv.d3.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+
+  <body class="skin-blue"><!--skin-black-->
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header ui-view="header" autoscroll="false" class="header"></header>
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+      <div growl></div>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside ui-view="sidebar" autoscroll="false" class="left-side sidebar-offcanvas"></aside>
+
+      <!-- Right side column. Contains the navbar and content of the page -->
+      <aside ui-view autoscroll="false" class="right-side slide-reveal">Loading....</aside>
+    </div><!-- ./wrapper -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+
+      ga('create','UA-XXXXX-X');
+      ga('send','pageview');
+    </script>
+
+    <!-- build:js modules/bootstrap.js data-main="modules/bootstrap"-->
+    <script src="config.js"> </script>
+    <script data-main="modules/bootstrap" src="../bower_components/requirejs/require.js"> </script>
+    <!-- endbuild -->
+  </body>
+</html>

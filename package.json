@@ -1,0 +1,73 @@
+{
+  "name": "Angular-AdminLTE",
+  "version": "0.0.1",
+  "description": "Angular Admin Theme",
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.5.8",
+    "del": "^0.1.3",
+    "gulp": "^3.8.8",
+    "gulp-angular-templatecache": "^1.4.2",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-cache": "^0.2.4",
+    "gulp-csso": "^0.2.9",
+    "gulp-flatten": "0.0.4",
+    "gulp-gh-pages": "^0.4.0",
+    "gulp-grep-stream": "^0.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-jshint": "^1.8.5",
+    "gulp-load-plugins": "^0.7.0",
+    "gulp-preprocess": "^1.1.1",
+    "gulp-protractor": "^0.0.11",
+    "gulp-replace": "^0.4.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-sourcemaps": "^1.2.2",
+    "gulp-traceur": "^0.13.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-useref": "^1.0.2",
+    "gulp-util": "^3.0.1",
+    "http-proxy": "^1.5.3",
+    "js-yaml": "^3.2.2",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.2.2",
+    "karma-requirejs": "^0.2.2",
+    "karma-traceur-preprocessor": "^0.3.1",
+    "lazypipe": "^0.2.2",
+    "main-bower-files": "^2.0.0",
+    "opn": "^1.0.0",
+    "protractor": "^1.3.1",
+    "requirejs": "^2.1.15",
+    "run-sequence": "^1.0.1",
+    "traceur": "0.0.66",
+    "wiredep": "^1.8.6",
+    "yargs": "^1.3.1"
+  },
+  "scripts": {
+    "postinstall": "bower cache clean && bower install",
+    "serve": "gulp serve",
+    "test": "gulp test",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xmlking/Angular-AdminLTE.git"
+  },
+  "keywords": [
+    "SPA",
+    "Angular",
+    "ES6",
+    "AMD",
+    "AdminLTE"
+  ],
+  "author": "Sumanth Chinthagunta",
+  "license": "MIT"
+}

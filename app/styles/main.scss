@@ -1,0 +1,22 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path:"/bower_components/fontawesome/fonts";
+$ionicons-font-path:"/bower_components/ionicons/fonts";
+
+  // bower:scss
+  @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+  @import "../../bower_components/bourbon/dist/_bourbon.scss";
+  @import "../../bower_components/compass-mixins/lib/_compass.scss";
+  @import "../../bower_components/animate.scss/animate.scss";
+  @import "../../bower_components/css-spinners/sass/spinner/spinner.scss";
+  @import "../../bower_components/fontawesome/scss/font-awesome.scss";
+  @import "../../bower_components/ionicons/scss/ionicons.scss";
+  // endbower
+@import 'themes/adminLTE/adminLTE';
+
+/* Dashboard
+-------------------------------------------------- */
+.connectedSortable {
+  .box-header,.nav-tabs-custom {
+    cursor: move;
+  }
+}

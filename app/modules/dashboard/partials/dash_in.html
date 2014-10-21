@@ -1,0 +1,269 @@
+<aside class="right-side">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1> Dashboard
+    <small> Biometric Attendance System</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="http://attendance.gov.in/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+<!-- Small boxes (Stat box) top statistics shorts -->
+<div class="row">
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-light-blue">
+      <div class="inner">
+        <h3> 149 </h3>
+
+        <p> Organizations </p>
+      </div>
+      <div class="icon"><i class="fa fa-building-o"></i></div>
+      <a href="http://attendance.gov.in/reports/organization" class="small-box-footer"> More info <i
+        class="fa fa-arrow-circle-right"></i> </a></div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-orange">
+      <div class="inner">
+        <h3 id="count_reg">51168 </h3>
+
+        <p> Registered Employees </p>
+      </div>
+      <div class="icon"><i class="fa fa-users"></i></div>
+      <a href="http://attendance.gov.in/reports/regemp" class="small-box-footer"> More info <i
+        class="fa fa-arrow-circle-right"></i> </a></div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-grass">
+      <div class="inner">
+        <h3 id="count_present">7 </h3>
+
+        <p> Present Today </p>
+      </div>
+      <div class="icon"><i class="fa fa-user"></i></div>
+      <a href="http://attendance.gov.in/reports/activeuser" class="small-box-footer"> More info <i
+        class="fa fa-arrow-circle-right"></i> </a></div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-wood">
+      <div class="inner">
+        <h3 id="count_device">469 </h3>
+
+        <p> Active Devices </p>
+      </div>
+      <div class="icon"><i class="fa fa-desktop"></i></div>
+      <a href="http://attendance.gov.in/reports/device" class="small-box-footer"> More info <i
+        class="fa fa-arrow-circle-right"></i> </a></div>
+  </div>
+  <!-- ./col -->
+</div>
+<!-- /.row -->
+
+<!-- top row -->
+<div class="row">
+  <!-- Left col -->
+  <!-- /.Left col -->
+
+  <!-- live graph-->
+  <section class="col-lg-6 connectedSortable">
+    <!-- interactive chart -->
+    <div class="box box-info">
+      <div class="box-header"><i class="fa fa-signal"></i>
+
+        <div style="display: none;" id="count_start">7</div>
+        <h3 class="box-title">Attendance Activity</h3>
+
+        <div class="pull-right box-tools">
+          <button class="btn btn-info btn-xs" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i
+            class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+      </div>
+      <div class="box-body">
+        <div id="container" style="height: 300px;"></div>
+      </div>
+      <!-- /.box-body-->
+
+    </div>
+    <!-- /.box -->
+
+  </section>
+
+
+  <section class="col-lg-6 connectedSortable">
+    <!-- employee registration bar graph -->
+    <div class="box box-danger">
+      <div class="box-header"><i class="fa fa-clock-o"></i>
+
+        <h3 class="box-title">Attendance In-Time Statistics</h3>
+
+        <div class="pull-right box-tools">
+          <button class="btn btn-danger btn-xs" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i
+            class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+      </div>
+      <div class="box-body">
+        <div id="employeechart" style="height: 300px;"></div>
+      </div>
+      <!-- /.box-body-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- right col -->
+
+
+  <!--  detailed analysis  / -->
+  <section class="col-lg-6 connectedSortable">
+    <!-- Box (with bar chart) -->
+    <div class="box box-default">
+      <div class="box-header">
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+          <button class="btn btn-default btn-xs" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i
+            class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+        <i class="fa fa-cloud"></i>
+
+        <h3 class="box-title">Authentication </h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body no-padding">
+        <div class="row">
+          <div class="col-sm-7">
+            <!-- bar chart -->
+            <div class="chart" id="combination" style="height: 220px;"></div>
+          </div>
+          <div class="col-sm-5">
+            <div class="pad box-lbl-txt">
+              <!-- Progress bars -->
+              <div class="clearfix">
+                <span class="pull-left">Present Today</span>
+                <small class="pull-right"><span id="cntpre">7</span> / 38086</small>
+              </div>
+              <div class="progress xs progress-striped active">
+                <div class="progress-bar progress-bar-green" style="width: 0%;"></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="pull-left">Verified Employees</span>
+                <small class="pull-right">38086 / 51168</small>
+              </div>
+              <div class="progress xs progress-striped active">
+                <div class="progress-bar progress-bar-light-blue" style="width: 74%;"></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="pull-left">Biometric Terminals</span>
+                <small class="pull-right">452/672</small>
+              </div>
+              <div class="progress xs progress-striped active">
+                <div class="progress-bar progress-bar-yellow" style="width: 67%;"></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="pull-left">Desktop Device</span>
+                <small class="pull-right">17/2586</small>
+              </div>
+              <div class="progress xs progress-striped active">
+                <div class="progress-bar progress-bar-aqua" style="width: 0%;"></div>
+              </div>
+
+              <div class="clearfix">
+                <span class="pull-left">Auth Request (Desktop)</span>
+                <small class="pull-right"><span class="text-green">2</span> | <span class="text-black">14</span></small>
+              </div>
+              <div class="progress xs progress-striped active xs">
+                <div class="progress-bar progress-bar-red" style="width: 14%;"></div>
+              </div>
+              <!-- Buttons -->
+
+            </div>
+            <!-- /.pad -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row - inside box -->
+      </div>
+      <!-- /.box-body -->
+
+      <div class="box-footer">
+        <div class="row">
+          <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+            <input type="text" class="knob" data-readonly="true" value="85.71" data-width="60" data-height="60"
+                   data-fgColor="#90b030"/>
+
+            <div class="knob-label">Biometric Terminal Request</div>
+          </div>
+          <!-- ./col -->
+          <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+            <input type="text" class="knob" data-readonly="true" value="14.29" data-width="60" data-height="60"
+                   data-fgColor="#f9590b"/>
+
+            <div class="knob-label">Desktop Terminal Request</div>
+          </div>
+          <!-- ./col -->
+          <div class="col-xs-4 text-center">
+            <h2><span class="text-teal"> 1.22 <small>sec</small> </span></h2>
+            <div class="knob-label">Average Response</div>
+          </div>
+          <!-- ./col -->
+
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.box-footer -->
+    </div>
+    <!-- /.box -->
+
+  </section>
+  <!-- /.Left col -->
+  <!-- / detailed analysis -->
+
+
+  <section class="col-lg-6 connectedSortable">
+    <!-- auth response line  -->
+    <div class="box box-success">
+      <div class="box-header"><i class="fa fa-rocket"></i>
+        <h4 class="box-title">Today's Attendance Trend</h4>
+
+        <div class="pull-right box-tools">
+          <button class="btn btn-success btn-xs" data-widget='collapse' data-toggle="tooltip" title="Collapse"><i
+            class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+      </div>
+      <div class="box-body">
+        <div id="dashboard_trend" style="height: 334px;"></div>
+      </div>
+      <!-- /.box-body-->
+    </div>
+    <!-- /.box -->
+
+  </section>
+
+
+  <center><h6> Beta Version | Best viewed on Chrome, Firefox, Explorer 11 and above | E-Mail:
+    helpdesk-attendance[@]gov.in <br/>
+    &copy; 2014 Attendance.gov.in. All rights reserved.</h6></center>
+</div>
+<!-- /.row -->
+
+<!-- graph section -->
+
+</section>
+<!-- /.content -->
+</aside>
+<!-- /.right-side -->

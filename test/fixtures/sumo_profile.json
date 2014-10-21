@@ -1,0 +1,25 @@
+{
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "authorities": [
+        {
+            "authority": "ROLE_SUPER_ADMIN",
+            "class": "org.springframework.security.core.authority.SimpleGrantedAuthority"
+        },
+        {
+            "authority": "ROLE_USER",
+            "class": "org.springframework.security.core.authority.SimpleGrantedAuthority"
+        }
+    ],
+    "credentialsNonExpired": true,
+    "departmentNumber": "NO_DEP",
+    "displayName": "Chintha, Sumanth",
+    "email": "sumo@demo.com",
+    "enabled": true,
+    "id": 1,
+    "ldapAuth": false,
+    "postalCode": "55555",
+    "title": "IT Consultant",
+    "uid": "sumo",
+    "username": "sumo"
+}
